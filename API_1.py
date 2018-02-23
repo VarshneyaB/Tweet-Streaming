@@ -7,16 +7,16 @@ from pymongo.mongo_client import MongoClient
 from pprint import pprint
 from datetime import datetime, timedelta
 from email.utils import parsedate_tz
+import requests
 
 
-
+ckey = "WAybii2PCWwRgQnso5yaIR1Xk"
+csecret = "M7aHF5gGfv2AlMz0us9Bvp8ZchFst9t6AeeXzAD2WdvaLmCe4v"
 
 
 vars = ["created_at","id_str","user","reply_count","retweet_count","favorite_count"]
 user = ["name","location"]
 
-atoken="341007217-tkviUAsahHUVH6r2e4k6F1GIgHiX5HAveIFzRJvu"
-asecret="wCNPJby1ZYn4dOsjqssTlARQTxWSTPtDrCmle6gNe9LFz"
 
 
 
@@ -91,16 +91,19 @@ class tweetStream:
         self.__secret = ""
         self.__dbname = "defaultTweetStorage"
 
-    def setAuth(self,key,secret):
-        self.__key = key
-        self.__secret = secret
+    def setAuth(self,filename):
+        f = open(filename,"r")
+        lines = f.read()
+        f.close()
+        self.__key,self.__secret = lines.strip().split('\n')
+        
 
     def setStorage(self,value):
         self.__dbname = value
 
     def startStreaming(self,query,limit = None,date1 = None,date2 = None):
-        auth = OAuthHandler(self.__key,self.__secret)
-        auth.set_access_token(atoken, asecret)
+        auth = OAuthHandler(ckey,csecret)
+        auth.set_access_token(self.__key, self.__secret)
         if(limit != None):
             limit -= 1
         twitterStream = Stream(auth, listener(limit,self.__dbname,date1,date2))
