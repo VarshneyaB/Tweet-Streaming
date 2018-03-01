@@ -10,7 +10,7 @@ To use Above APIs one need to install
 _To use this API you need to have a twitter account.
 And,you need to set you access key and access Token in a file,each per line and give it to tweetStream.setAuth()_
 ## usage
-1.tweetStream - class need to be imported from API_1
+1. tweetStream - class need to be imported from API_1
 2. setStorage - To set Database's name
 3. startStreaming has args
    * query - word to search
