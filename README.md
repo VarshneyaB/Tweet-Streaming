@@ -18,7 +18,7 @@ And,you need to set you access key and access Token in a file,each per line and 
    * date1,date2 - dateRange(optional)
    * limit - Number of Tweets
 
-###Example
+### Example
 
 ```
 from API_1 import tweetStream
@@ -39,7 +39,7 @@ t.startStreaming(query = "#hollywood",limit = 10)
     * filter - {variable : {"min" : "Val","max" : "Val"}}
     * sortBy - list of Tuples (Variable,direction)  direction = 1/0 denoting ascending or descending.
 
-###Example
+### Example
 
 ```
 from API_2 import tweetReader
@@ -55,10 +55,10 @@ tweets = t.showTweets(
 for tweet in tweets:
     pprint(tweet["user_friends_count"])
 ```
-#API_3
+# API_3
 This is to export the data from database into a csv.
 
-##usage
+## usage
 
 1. setColumns - to select the columns we want to export
 2. export - arguements are explained below
