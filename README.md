@@ -18,9 +18,13 @@ While using API_1 personal access token,access key of twitter are to be given as
 ###Example
 
 t = tweetStream()
+
 t.setStorage("xstorage")
+
 t.authKey("authKey")  //file name in which authkey is there
+
 t.startStreaming("#hollywood")
+
 
 # API_2
 
