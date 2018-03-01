@@ -4,7 +4,6 @@ To use Above APIs one need to install
 1. Tweepy to work with twitter
 2. pymongo to work with databases
 
-While using API_1 personal access token,access key of twitter are to be given as a file.
 
 # API_1
 
@@ -32,6 +31,8 @@ t.startStreaming(query = "#hollywood",limit = 10)
 
 # API_2
 
+_This is to fetch tweets that were stored in database_
+
 ## usage
 1. setStorage -- To set Database's name
 2. showTweets -- Displays tweets. It has three args
@@ -56,7 +57,8 @@ for tweet in tweets:
     pprint(tweet["user_friends_count"])
 ```
 # API_3
-This is to export the data from database into a csv.
+
+_This is to export the data from database into a desired file._
 
 ## usage
 
