@@ -15,7 +15,7 @@ And,you need to set you access key and access Token in a file,each per line and 
 3. startStreaming has args
    * query - word to search
    * date1,date2 - dateRange(optional)
-   * limit - Number of Tweets
+   * limit - Number of Tweets(optional)
 
 ### Example
 
@@ -36,9 +36,9 @@ _This is to fetch tweets that were stored in database_
 ## usage
 1. setStorage -- To set Database's name
 2. showTweets -- Displays tweets. It has three args
-    * search - "textTosearch"
-    * filter - {variable : {"min" : "Val","max" : "Val"}}
-    * sortBy - list of Tuples (Variable,direction)  direction = 1/0 denoting ascending or descending.
+    * search - "textTosearch" (optional)
+    * filter - {variable : {"min" : "Val","max" : "Val"}} (optional)
+    * sortBy - list of Tuples (Variable,direction)  direction = 1/0 denoting ascending or descending.  (optional)
 
 ### Example
 
@@ -69,7 +69,7 @@ _This is to export the data from database into a desired file._
     *   mode - mode in which we wanna save the file
         *   "a" - append mode
         *   "w" - write mode
-    *   sep - separator by which columns have to be seperated
+    *   sep - separator by which columns have to be seperated  (optional)
 
 ### Example
 
