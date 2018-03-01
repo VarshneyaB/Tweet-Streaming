@@ -11,9 +11,9 @@ While using API_1 personal access token,access key of twitter are to be given as
 ## usage
 1. setStorage -- To set Database's name
 2. startStreaming has args
-      *query - word to search
-      *date1 , *date2 - dateRange(optional)
-      *limit - Number of Tweets
+* query - word to search
+* date1 , *date2 - dateRange(optional)
+* limit - Number of Tweets
 # API_2
 
 ## usage
